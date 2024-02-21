@@ -35,8 +35,8 @@ document.addEventListener ("alpine:init", () => {
                         gamma = 45
                     }
 
-                    this.cursor_x = beta / 45 * this.screen_width;
-                    this.cursor_y = gamma / 45 * this.screen_height;
+                    this.cursor_x = gamma / 45 * this.screen_width;
+                    this.cursor_y = beta / 45 * this.screen_height;
                 })
             } else {
                 window.addEventListener("mousemove", (event) => {
