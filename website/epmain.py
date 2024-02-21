@@ -7,8 +7,7 @@ epmain = Blueprint("epmain", __name__)
 def home():
     return(
         render_template(
-            "index.html",
-            title="Home"
+            "index.html"
         )
     )
 
