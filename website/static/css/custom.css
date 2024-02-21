@@ -74,10 +74,21 @@ button.loading::before {
     transition: width 0.6s ease;
     z-index: 0;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 button.loading {
     transition: transform 0.1s ease, box-shadow 0.1s linear;
+}
+
+.button-container, .button-container button h6  {
+    width: 50%;
+    text-decoration: none;
+    font-family: "noto-sans-mono", monospace;
+}
+
+.button-container button {
+    width: calc(100% - 32px);
 }
 
 button.loading:hover {
@@ -100,5 +111,8 @@ button.loading * {
     }
     .flex {
         backdrop-filter: none;
+    }
+    .button-container {
+        width: 75%;
     }
 }
