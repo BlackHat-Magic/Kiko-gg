@@ -19,7 +19,7 @@ document.addEventListener ("alpine:init", () => {
             this.screen_width = window.innerWidth;
             this.screen_height = window.innerHeight;
 
-            if (window.DeviceOrientationEvent) {
+            if (this.screen_width < 900) {
                 window.addEventListener("deviceorientation", (event) => {
                     beta = event.beta;
                     gamma = event.gamma;
