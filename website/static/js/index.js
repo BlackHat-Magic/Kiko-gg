@@ -87,8 +87,10 @@ document.addEventListener ("alpine:init", () => {
             for (let i = 0; i < background_container.children.length; i++) {
                 background_container.children[i].style.transform = `translate(${this.current_x_adjusted}px, ${this.current_y_adjusted}px)`;
             }
-            content = document.querySelector("#content");
-            content.style.transform = `translate(${this.current_x / 4}px, ${this.current_y / 4}px)`;
+            if(this.screen_width > 900) {
+                content = document.querySelector("#content");
+                content.style.transform = `translate(${this.current_x / 4}px, ${this.current_y / 4}px)`;
+            }
 
             requestAnimationFrame(() => this.update_background ());
         },

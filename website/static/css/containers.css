@@ -100,7 +100,7 @@ div.interior {
 @media only screen and (max-width: 900px) {
     .flex, .flex.wide, .flex.narrow {
         margin: 0;
-        width: 110%;
+        width: 100%;
         border-radius: 0px!important;
         padding: 12px;
         flex-flow: column nowrap;
