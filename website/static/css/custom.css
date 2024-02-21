@@ -76,6 +76,15 @@ button.loading::before {
     overflow: hidden;
 }
 
+button.loading {
+    transition: transform 0.1s ease, box-shadow 0.1s linear;
+}
+
+button.loading:hover {
+    transform: scale(1.05);
+    box-shadow: 8px rgba(0, 0, 0, 0.2), 8px rgba(0, 0, 0, 0.2);
+}
+
 button.loading:hover::before {
     width: 100%;
 }
@@ -83,4 +92,10 @@ button.loading:hover::before {
 button.loading * {
     position: relative;
     z-index: 1;
+}
+
+@media only screen and (max-width: 900px) {
+    .flex.narrow.footer {
+        display: none;
+    }
 }

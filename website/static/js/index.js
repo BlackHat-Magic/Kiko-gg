@@ -19,10 +19,31 @@ document.addEventListener ("alpine:init", () => {
             this.screen_width = window.innerWidth;
             this.screen_height = window.innerHeight;
 
-            window.addEventListener("mousemove", (event) => {
-                this.cursor_x = event.clientX;
-                this.cursor_y = event.clientY;
-            });
+            if (window.DeviceOrientationEvent) {
+                window.addEventListener("deviceorientation", (event) => {
+                    beta = event.beta;
+                    gamma = event.gamma;
+
+                    if(beta < -45) {
+                        beta = -45;
+                    } else if (beta > 45) {
+                        beta = 45;
+                    }
+                    if(gamma < -45) {
+                        gamma = -45;
+                    } else if (gamma > 45) {
+                        gamma = 45
+                    }
+
+                    this.cursor_x = beta / 45 * this.screen_width;
+                    this.cursor_y = gamma / 45 * this.screen_height;
+                })
+            } else {
+                window.addEventListener("mousemove", (event) => {
+                    this.cursor_x = event.clientX;
+                    this.cursor_y = event.clientY;
+                });
+            }
 
             window.addEventListener("resize", () => {
                 this.screen_width = window.innerWidth;
