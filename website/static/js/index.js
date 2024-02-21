@@ -99,7 +99,7 @@ document.addEventListener ("alpine:init", () => {
             text_height = Math.sqrt(2) * document.querySelector("#reference").getBoundingClientRect().height;
             min_repeats_x = Math.ceil(this.screen_width / text_height);
             min_repeats_y = Math.ceil(this.screen_height / text_height);
-            return(min_repeats_x + min_repeats_y);
+            return(min_repeats_x + min_repeats_y + 1);
         },
 
         repeat_number () {
