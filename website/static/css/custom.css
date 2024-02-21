@@ -98,4 +98,7 @@ button.loading * {
     .flex.narrow.footer {
         display: none;
     }
+    .flex {
+        backdrop-filter: blur(5px);
+    }
 }
